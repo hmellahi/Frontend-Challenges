@@ -1,6 +1,9 @@
 # Frontend Challenges
 
-This repo contains frontend and javascript challenges to help developers improve problem-solving skills and create performant and accessible UIs.
+**This repository features frontend and JavaScript challenges designed to help developers enhance their problem-solving skills and build performant, accessible UIs.  
+You can also [visit the app](https://dub.sh/frontwizards).**
+
+<img width="1000" heigh="1000" alt="Screenshot 2024-12-28 at 03 45 33" src="https://github.com/user-attachments/assets/094dec85-df71-4aae-8c33-3b11ab46e72c" />
 
 Each UI challenge has:
 
