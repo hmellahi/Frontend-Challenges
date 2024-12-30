@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import { cn } from "./utils/cn";
 
@@ -7,7 +7,7 @@ const GRID_SIZE = 9;
 
 const DefaultGrid = Array.from({ length: GRID_SIZE }).fill(0);
 
-const App: FC = () => {
+const App = () => {
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(0);
   const timeout = useRef<NodeJS.Timeout | null>(null);

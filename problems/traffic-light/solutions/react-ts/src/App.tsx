@@ -25,7 +25,7 @@ export default function App() {
   return (
     <main className="container">
       <TrafficLight
-        layout="traffic-light-container--vertical"
+        layout="horizontal"
         config={config}
       />
       <TrafficLight config={config} />
