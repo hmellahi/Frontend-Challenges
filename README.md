@@ -141,7 +141,7 @@ Also :
 
 ### TODOs:
 
-- [ ] Configure axe-core to ignore minor accessibility warnings in test runs (e.g., "Page should contain a level-one heading")
+- [ ] Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function.
 - [ ] Set up GitHub Actions for pull requests to:
   - Validate solutions can be built successfully
   - Check ESLint compliance
