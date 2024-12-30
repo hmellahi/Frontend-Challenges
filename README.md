@@ -145,11 +145,8 @@ Also :
 - [ ] Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function.
 - [ ] Set up GitHub Actions for pull requests to:
   - Validate solutions can be built successfully
-  - Check ESLint compliance
-- [ ] Set up GitHub Actions for the main branch to:
-  - Validate solutions can be built successfully
-  - Check ESLint compliance
-- [ ] Add automated accessibility testing to CI pipeline using axe-core
+  - Accessibility check
+- [ ] Extend the CI pipeline for the main branch too
 
 ## How To Add Your Solution
 

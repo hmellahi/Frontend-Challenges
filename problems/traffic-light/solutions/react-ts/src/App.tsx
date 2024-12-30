@@ -6,7 +6,7 @@ import { Config } from "./types";
 const config: Config = {
   red: {
     backgroundColor: "red",
-    duration: 4000,
+    duration: 2000,
     next: "green",
   },
   yellow: {
@@ -16,7 +16,7 @@ const config: Config = {
   },
   green: {
     backgroundColor: "green",
-    duration: 3000,
+    duration: 2000,
     next: "yellow",
   },
 };
