@@ -11,7 +11,7 @@ export default function TrafficLight({
   layout = "vertical",
 }: {
   config: Config;
-  layout?: string;
+  layout?: "vertical" | "horizontal";
 }) {
   const [currentLight, setCurrentLight] = useState("green");
 
