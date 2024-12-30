@@ -85,6 +85,17 @@ const App: FC = () => {
 
   return (
     <main className="flex h-full min-h-[100vh] flex-col items-center p-2 text-white w-full max-w-[42rem] mx-auto uppercase pt-12">
+      <div role="status" aria-live="polite" className="sr-only">
+        {isGameOver
+          ? "Game Over! Final score: " + score
+          : "Current score: " + score}
+      </div>
+
+      <div className="sr-only" id="game-instructions">
+        Click on moles as they appear to score points. You have {GAME_DURATION}
+        seconds.
+      </div>
+
       <div className="flex h-7 w-full items-center justify-around">
         <span className="text-xl font-bold">Score : {score}</span>
         <div className="w-[12rem] text-center">
@@ -109,8 +120,8 @@ const App: FC = () => {
           >
             <button
               tabIndex={-1}
-              aria-label={`Mole ${index + 1}`}
               onClick={() => catchHole(index)}
+              aria-label={`Mole ${index + 1}`}
               className={cn([
                 "h-28 w-28 translate-x-[15%] translate-y-[100%] select-none duration-100 ease-in",
                 {

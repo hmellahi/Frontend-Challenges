@@ -200,8 +200,13 @@ export default function App() {
     return () => window.removeEventListener("keydown", handleKeyPress, false);
   }, [currentRow, grid, gameStatus, isColoring]);
 
+  const gameStatusMessage = getGameStatusMessage(gameStatus, wordToGuess);
+
   return (
     <main className="min-h-screen">
+      <div role="status" aria-live="polite" className="sr-only">
+        {gameStatusMessage}
+      </div>
       <div className="px-4 py-12 md:py-24 max-w-2xl mx-auto flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl mb-6 md:mb-10">WORDLE</h1>
         <div
@@ -210,9 +215,7 @@ export default function App() {
             !isGameOver && "invisible"
           )}
         >
-          <span className="mr-4">
-            {getGameStatusMessage(gameStatus, wordToGuess)}
-          </span>
+          <span className="mr-4">{gameStatusMessage}</span>
           <button
             onClick={reset}
             className="bg-white rounded-md text-black px-4 py-2"
