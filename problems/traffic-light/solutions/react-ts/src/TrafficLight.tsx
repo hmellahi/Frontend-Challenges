@@ -28,7 +28,7 @@ export default function TrafficLight({
 
   return (
     <div
-      role="alert"
+      aria-live="polite"
       aria-label={`Traffic light is ${currentLight}`}
       className={cn([
         "traffic-light-container",

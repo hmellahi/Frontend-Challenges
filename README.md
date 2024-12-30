@@ -22,6 +22,7 @@ Each UI challenge has:
   - [Getting Started](#getting-started)
   - [How to Check if Your Solution (UI) Is Accessible](#how-to-check-if-your-solution-ui-is-accessible)
   - [How to Contribute](#how-to-contribute)
+    - [TODOs](#todos)
   - [How To Add Your Solution](#how-to-add-your-solution)
   - [How To Add New Problem](#how-to-add-new-problem)
   - [Coding Standards](#coding-standards)
@@ -152,6 +153,9 @@ Also :
 
 ## How To Add Your Solution
 
+> [!NOTE]
+> Please add your solution only if you think it's a good solution that others can learn from.
+
 To add your solution follow the process for [making a pull request to an open-source project](https://github.com/gabrieldemarmiesse/getting_started_open_source).
 
 In short:
@@ -165,10 +169,16 @@ In short:
 
 If you wanna work with React, you can use the starter template.
 
-if you can create a new problem, use the create command:
+if you can create a new problem called 'example-problem', use the create command:
 
 ```bash
-challenge-cli create new-problem
+challenge-cli create "example-problem"
+
+cd problems/example-problem/solutions/react-ts
+
+npm install
+
+npm run dev
 ```
 
 ## Coding Standards
