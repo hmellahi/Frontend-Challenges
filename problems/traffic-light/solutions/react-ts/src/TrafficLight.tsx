@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Config } from "./types";
+import { cn } from "./utils/cn";
 
 function Light({ backgroundColor }: { backgroundColor: string }) {
-  return <div className="traffic-light" style={{ backgroundColor }}></div>;
+  return <div className="traffic-light" style={{ backgroundColor }} />;
 }
 
 export default function TrafficLight({
@@ -10,29 +11,29 @@ export default function TrafficLight({
   layout = "vertical",
 }: {
   config: Config;
-  layout?: string;
+  layout?: "vertical" | "horizontal";
 }) {
   const [currentLight, setCurrentLight] = useState("green");
 
   useEffect(() => {
     const { next, duration } = config[currentLight];
-    const interval = setTimeout(() => {
+    const timerId = setTimeout(() => {
       setCurrentLight(next);
     }, duration);
 
     return () => {
-      clearInterval(interval);
+      clearTimeout(timerId);
     };
-  }, [currentLight]);
+  }, [currentLight, config]);
 
   return (
     <div
-      className={[
+      role="alert"
+      aria-label={`Traffic light is ${currentLight}`}
+      className={cn([
         "traffic-light-container",
         layout === "vertical" && "traffic-light-container--vertical",
-      ]
-        .filter((cls) => !!cls)
-        .join(" ")}
+      ])}
     >
       {Object.keys(config).map((color) => (
         <Light

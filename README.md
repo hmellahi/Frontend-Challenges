@@ -21,7 +21,7 @@ Each UI challenge has:
   - [Use Cases](#use-cases)
   - [Getting Started](#getting-started)
   - [How to Check if Your Solution (UI) Is Accessible](#how-to-check-if-your-solution-ui-is-accessible)
-  - [How can you help?](#how-can-you-help)
+  - [How to Contribute](#how-to-contribute)
   - [How To Add Your Solution](#how-to-add-your-solution)
   - [How To Add New Problem](#how-to-add-new-problem)
   - [Coding Standards](#coding-standards)
@@ -35,7 +35,7 @@ Each UI challenge has:
 | Title                                                                                            | Difficulty | Completed | Accessible | Reviewed | Solution                                                 |
 | ------------------------------------------------------------------------------------------------ | ---------- | --------- | ---------- | -------- | -------------------------------------------------------- |
 | [Traffic light](https://frontendpractice.hmellahi.me/challenge/user-interface/traffic-light)     | Easy       | ✅        | ✅         | ✅       | [Solution](/problems/traffic-light/solutions/react-ts)   |
-| [File Tree](https://frontendpractice.hmellahi.me/challenge/user-interface/file-tree)     | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/file-tree/solutions/react-ts)   |
+| [File Tree](https://frontendpractice.hmellahi.me/challenge/user-interface/file-tree)             | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/file-tree/solutions/react-ts)       |
 | [Twitter like](https://frontendpractice.hmellahi.me/challenge/user-interface/twitter-like)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/twitter-like/solutions/react-ts)    |
 | [Twitter like II](https://frontendpractice.hmellahi.me/challenge/user-interface/twitter-like-II) | Medium     | -         | -          | -        | [Solution](/problems/twitter-like-II/solutions/react-ts) |
 | [Whack a Mole](https://frontendpractice.hmellahi.me/challenge/user-interface/whack-a-mole)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
@@ -87,6 +87,7 @@ Let's say you want to work on the traffic light challenge.
 You can create a new project or use our CLI tool to use the starter template.
 
 ### First Time Setup
+
 ```bash
 # Clone repository and setup CLI tool (only needed once)
 git clone https://github.com/frontendwizards/frontend-challenges.git
@@ -99,6 +100,7 @@ npm link
 ```
 
 ### Start Working
+
 ```bash
 # Navigate to the root of the repository
 cd ..
@@ -130,12 +132,23 @@ Also :
 > [!NOTE]  
 > axe-core is already included in the starter template.
 
-## How can you help?
+## How to Contribute
 
 - ⭐️ Star this repository to motivate the addition of more challenges
 - 🤓 Solved an interesting problem? Feel free to submit it!
-- 🐞 If you find a bug, raise an issue or fix it and send a pull request.
-- 📚 Improve documentation or add tutorials for solving challenges.
+- 🐞 If you find a bug, raise an issue or fix it and send a pull request
+- 📚 Improve documentation or add tutorials for solving challenges
+
+### TODOs:
+
+- [ ] Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function.
+- [ ] Set up GitHub Actions for pull requests to:
+  - Validate solutions can be built successfully
+  - Check ESLint compliance
+- [ ] Set up GitHub Actions for the main branch to:
+  - Validate solutions can be built successfully
+  - Check ESLint compliance
+- [ ] Add automated accessibility testing to CI pipeline using axe-core
 
 ## How To Add Your Solution
 
@@ -163,4 +176,4 @@ challenge-cli create new-problem
 Please adhere to the following coding standards when submitting solutions:
 
 - Ensure your app is accessible. Refer to the [Accessibility Guidelines](#how-to-check-if-your-solution-ui-is-accessible) for more details.
-- Format your code using Prettier.
+- Format your code.
