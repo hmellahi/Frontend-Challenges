@@ -13,7 +13,8 @@ body,
 
 body {
   font-family: "Poppins";
-  background-color: black;
+  background-color: #1f2937;
+  color: white;
 }
 
 main {
