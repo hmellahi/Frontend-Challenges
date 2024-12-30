@@ -138,7 +138,7 @@ Also :
 - ⭐️ Star this repository to motivate the addition of more challenges
 - 🤓 Solved an interesting problem? Feel free to submit it!
 - 🐞 If you find a bug, raise an issue or fix it and send a pull request
-- 📚 Improve documentation or add tutorials for solving challenges
+- 📚 Add tutorials to explain official problem solutions
 
 ### TODOs:
 
