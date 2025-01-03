@@ -24,7 +24,7 @@ Each UI challenge has:
   - [How to Check if Your Solution (UI) Is Accessible](#how-to-check-if-your-solution-ui-is-accessible)
   - [How to Contribute](#how-to-contribute)
     - [TODOs](#todos)
-  - [How To Add Your Solution](#how-to-add-your-solution)
+  - [How To Share Your Solution](#how-to-share-your-solution)
   - [How To Add New Problem](#how-to-add-new-problem)
   - [Coding Standards](#coding-standards)
 
@@ -150,12 +150,12 @@ Also :
 - [ ] Extend the CI pipeline for the main branch too
 - [ ] Add resources for learning key concepts related to the problem
 
-## How To Add Your Solution
+## How To Share Your Solution
 
 > [!NOTE]
-> Please add your solution only if you think it's a good solution that others can learn from.
+> Share your solution only if you believe it's good and others can learn from it.
 
-To add your solution follow the process for [making a pull request to an open-source project](https://github.com/gabrieldemarmiesse/getting_started_open_source).
+To share your solution follow the process for [making a pull request to an open-source project](https://github.com/gabrieldemarmiesse/getting_started_open_source).
 
 In short:
 
