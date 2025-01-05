@@ -21,7 +21,7 @@ Each UI challenge has:
     - [Utility functions problems](#utility-functions-problems)
   - [Use Cases](#use-cases)
   - [Getting Started](#getting-started)
-  - [How to Check if Your Solution (UI) Is Accessible](#how-to-check-if-your-solution-ui-is-accessible)
+  - [How to Review Your Solution](#how-to-review-your-solution)
   - [How to Contribute](#how-to-contribute)
     - [TODOs](#todos)
   - [How To Share Your Solution](#how-to-share-your-solution)
