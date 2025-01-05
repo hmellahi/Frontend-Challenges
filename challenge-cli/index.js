@@ -3,6 +3,7 @@
 const { program } = require("commander");
 const { startChallenge } = require("./start-challenge");
 const { createChallenge } = require("./create-challenge");
+const { checkLinks } = require("./check-links");
 const { validateProjectRoot } = require("./utils");
 // const { listChallenges } = require("./list-challenges");
 
@@ -32,6 +33,17 @@ program
     console.log(
       `To begin working on the challenge\n run: cd "${solutionPath}"`
     );
+  });
+
+program
+  .command("check-links")
+  .description("Check if all problem links are working")
+  .action(async () => {
+    validateProjectRoot();
+    const success = await checkLinks();
+    if (!success) {
+      process.exit(1);
+    }
   });
 
 program

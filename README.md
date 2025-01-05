@@ -34,14 +34,14 @@ Each UI challenge has:
 
 <p align="center">
 
-| Title                                                                                            | Difficulty | Completed | Accessible | Reviewed | Solution                                                 |
-| ------------------------------------------------------------------------------------------------ | ---------- | --------- | ---------- | -------- | -------------------------------------------------------- |
-| [Traffic light](https://frontendpractice.hmellahi.me/challenge/user-interface/traffic-light)     | Easy       | ✅        | ✅         | ✅       | [Solution](/problems/traffic-light/solutions/react-ts)   |
-| [File Tree](https://frontendpractice.hmellahi.me/challenge/user-interface/file-tree)             | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/file-tree/solutions/react-ts)       |
-| [Twitter like](https://frontendpractice.hmellahi.me/challenge/user-interface/twitter-like)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/twitter-like/solutions/react-ts)    |
-| [Twitter like II](https://frontendpractice.hmellahi.me/challenge/user-interface/twitter-like-II) | Medium     | -         | -          | -        | [Solution](/problems/twitter-like-II/solutions/react-ts) |
-| [Whack a Mole](https://frontendpractice.hmellahi.me/challenge/user-interface/whack-a-mole)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
-| [Wordle Game](https://frontendpractice.hmellahi.me/challenge/user-interface/wordle-game)         | Hard       | ✅        | ✅         | ✅       | [Solution](/problems/wordle-game/solutions/react-ts)     |
+| Title                                                                                | Difficulty | Completed | Accessible | Reviewed | Solution                                                 |
+| ------------------------------------------------------------------------------------ | ---------- | --------- | ---------- | -------- | -------------------------------------------------------- |
+| [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light)     | Easy       | ✅        | ✅         | ✅       | [Solution](/problems/traffic-light/solutions/react-ts)   |
+| [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)             | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/file-tree/solutions/react-ts)       |
+| [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/twitter-like/solutions/react-ts)    |
+| [Twitter like II](https://frontwizards.com/challenge/user-interface/twitter-like-II) | Medium     | -         | -          | -        | [Solution](/problems/twitter-like-II/solutions/react-ts) |
+| [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)       | Medium     | ✅        | ✅         | ✅       | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
+| [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)         | Hard       | ✅        | ✅         | ✅       | [Solution](/problems/wordle-game/solutions/react-ts)     |
 
 </p>
 
@@ -128,23 +128,23 @@ npm run dev
 
 - Use automated accessibility checkers like [axe-core](https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react) to detect most accessibility issues.
 
-> **Note:** axe-core is already included in the starter template.
+> [!NOTE] axe-core is already included in the starter template.
 
 - Test your app with keyboard to ensure full keyboard navigation (if applicable).
 - Add ARIA labels to make your app understandable by screen readers.
 - Use [Claude](https://claude.ai/new) for a final accessibility & quality check.
 
-**Example Prompt for Claude:**
+  **Example Prompt for Claude:**
 
-```text
-Can you review my code for accessibility and best practices? Please:
+  ```text
+  Can you review my code for accessibility and best practices? Please:
 
-- Point out critical issues that must be fixed (if any)
-- Rate the overall implementation (e.g., production-ready, needs work, etc.)
+  - Point out critical issues that must be fixed (if any)
+  - Rate the overall implementation (e.g., production-ready, needs work, etc.)
 
-Here's my code:
-[your code]
-```
+  Here's my code:
+  [your code]
+  ```
 
 ## How to Contribute
 
@@ -156,7 +156,7 @@ Here's my code:
 ### TODOs:
 
 - [ ] Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function.
-- [ ] Add a screenshot img of the problem, could be automated?
+- [ ] Add a screenshot img of each problem in the README, could be automated?
 - [ ] Set up GitHub Actions for pull requests to:
   - Validate solutions can be built successfully
   - Accessibility check
