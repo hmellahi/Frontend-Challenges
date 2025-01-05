@@ -128,7 +128,8 @@ npm run dev
 
 - Use automated accessibility checkers like [axe-core](https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react) to detect most accessibility issues.
 
-> [!NOTE] axe-core is already included in the starter template.
+> [!NOTE]
+> axe-core is already included in the starter template.
 
 - Test your app with keyboard to ensure full keyboard navigation (if applicable).
 - Add ARIA labels to make your app understandable by screen readers.
