@@ -12,8 +12,8 @@ Build a clone of the popular word game **Wordle**, where players have six attemp
   - **Correct (Green)**: The letter is in the correct position.
   - **Present (Yellow)**: The letter is in the word but in the wrong position.
   - **Absent (Dark Gray)**: The letter is not in the word at all.
-- No need to validate if a guess is a valid five-letter word.
 - After the game ends, display a "Reset" button so the player can play again with a new randomly-chosen word.
+- No need to validate if a guess is a valid English word.
 
 ## Colors
 
