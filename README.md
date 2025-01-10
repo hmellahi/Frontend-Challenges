@@ -77,6 +77,11 @@ Each challenge has:
 
 | Title                                                                                | Difficulty | Completed | Accessible | Solution                                                 |
 | ------------------------------------------------------------------------------------ | ---------- | --------- | ---------- | -------------------------------------------------------- |
+| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)         | Easy       | -         | -          | -                                                        |
+| [Counter](https://frontwizards.com/challenge/user-interface/counter)                 | Easy       | -         | -          | -                                                        |
+| [Rating Stars](https://frontwizards.com/challenge/user-interface/rating-stars)       | Easy       | -         | -          | -                                                        |
+| [Simple Form I (without accessibility)](https://frontwizards.com/challenge/user-interface/build-form-1)     | Easy       | -         | -          | -                                                        |
+| [Simple Form II (with accessibility)](https://frontwizards.com/challenge/user-interface/build-form-2)    | Easy       | -         | -          | -                                                        |
 | [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light)     | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
 | [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)             | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
 | [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)       | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
@@ -190,6 +195,8 @@ npm run dev
 
 ## How to Contribute
 
+Before starting work on a pull request (PR), please create an issue to discuss your proposal.
+
 - ⭐️ Star this repository to motivate the addition of more challenges
 - 🤓 Solved an interesting problem? Feel free to submit it!
 - 🐞 If you find a bug, raise an issue or fix it and send a pull request
@@ -197,6 +204,7 @@ npm run dev
 
 ### TODOs:
 
+- [ ] Add more beginner-friendly UI problems (you can check the non solved UI problems in the UI table)
 - [ ] Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function.
 - [ ] Add a screenshot img of each problem in the README, could be automated?
 - [ ] Set up GitHub Actions for pull requests to:
