@@ -36,13 +36,66 @@ async function checkUrl(url) {
   }
 }
 
+function parseMarkdownTable(markdown) {
+  const lines = markdown.split("\n");
+  const completedProblems = new Set();
+
+  let isInUITable = false;
+  let headerSeen = false;
+
+  for (const line of lines) {
+    // Detect UI challenges table by looking for the header with "Completed" column
+    if (line.includes("| Title") && line.includes("| Completed |")) {
+      isInUITable = true;
+      headerSeen = false;
+      continue;
+    }
+
+    // Skip separator line
+    if (line.startsWith("|-")) {
+      if (isInUITable) headerSeen = true;
+      continue;
+    }
+
+    // Process table rows
+    if (isInUITable && headerSeen && line.startsWith("|")) {
+      const columns = line.split("|").map((col) => col.trim());
+      // Check if problem is completed (has ✅)
+      if (columns.some((col) => col.includes("✅"))) {
+        // Extract problem link
+        const titleCol = columns[1];
+        const match = titleCol.match(/\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          completedProblems.add(match[2]);
+        }
+      }
+    }
+
+    // Exit table when we hit an empty line or non-table line
+    if (isInUITable && (!line.trim() || !line.startsWith("|"))) {
+      isInUITable = false;
+    }
+  }
+
+  return completedProblems;
+}
+
 function extractLinks(markdown) {
   const links = [];
   const renderer = new marked.Renderer();
+  const completedProblems = parseMarkdownTable(markdown);
 
   renderer.link = (href, title, text) => {
     if (href.startsWith("http")) {
-      links.push(href);
+      // Only include links that are either:
+      // 1. From completed problems
+      // 2. Not problem links (e.g. external resources, leetcode problems)
+      if (
+        completedProblems.has(href) ||
+        !href.includes("frontwizards.com/challenge")
+      ) {
+        links.push(href);
+      }
     }
     return "";
   };
