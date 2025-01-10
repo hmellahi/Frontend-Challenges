@@ -184,7 +184,7 @@ npm run dev
   **Example Prompt for Claude:**
 
   ```text
-  Can you review my code for accessibility and best practices? Please:
+  Review my code for accessibility and best practices:
 
   - Point out critical issues that must be fixed (if any)
   - Rate the overall implementation (e.g., production-ready, needs work, etc.)
