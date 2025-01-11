@@ -78,9 +78,9 @@ Each challenge has:
 | Title                                                                                                   | Difficulty | Completed | Accessible | Solution                                                 |
 | ------------------------------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
  | Hello World | Easy | - | - | - | 
- | Counter | Easy | - | - | - | 
- | Rating Stars | Easy | - | - | - | 
+ | CountDown | Easy | - | - | - | 
  | Simple Form I (without accessibility) | Easy | - | - | - | 
+ | Rating Stars | Easy | - | - | - | 
  | Simple Form II (with accessibility) | Easy | - | - | - | 
  | Traffic light | Easy | ✅ | ✅ | [Solution](/problems/traffic-light/solutions/react-ts) | 
  | File Tree | Medium | ✅ | ✅ | [Solution](/problems/file-tree/solutions/react-ts) | 
