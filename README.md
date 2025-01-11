@@ -75,19 +75,19 @@ Each challenge has:
 
 <p align="center">
 
-| Title                                                                                | Difficulty | Completed | Accessible | Solution                                                 |
-| ------------------------------------------------------------------------------------ | ---------- | --------- | ---------- | -------------------------------------------------------- |
-| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)         | Easy       | -         | -          | -                                                        |
-| [Counter](https://frontwizards.com/challenge/user-interface/counter)                 | Easy       | -         | -          | -                                                        |
-| [Rating Stars](https://frontwizards.com/challenge/user-interface/rating-stars)       | Easy       | -         | -          | -                                                        |
-| [Simple Form I (without accessibility)](https://frontwizards.com/challenge/user-interface/build-form-1)     | Easy       | -         | -          | -                                                        |
-| [Simple Form II (with accessibility)](https://frontwizards.com/challenge/user-interface/build-form-2)    | Easy       | -         | -          | -                                                        |
-| [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light)     | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
-| [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)             | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
-| [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)       | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
-| [Twitter like II](https://frontwizards.com/challenge/user-interface/twitter-like-II) | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
-| [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)       | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
-| [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)         | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
+| Title                                                                                                   | Difficulty | Completed | Accessible | Solution                                                 |
+| ------------------------------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
+| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)                            | Easy       | -         | -          | -                                                        |
+| [Counter](https://frontwizards.com/challenge/user-interface/counter)                                    | Easy       | -         | -          | -                                                        |
+| [Rating Stars](https://frontwizards.com/challenge/user-interface/rating-stars)                          | Easy       | -         | -          | -                                                        |
+| [Simple Form I (without accessibility)](https://frontwizards.com/challenge/user-interface/build-form-1) | Easy       | -         | -          | -                                                        |
+| [Simple Form II (with accessibility)](https://frontwizards.com/challenge/user-interface/build-form-2)   | Easy       | -         | -          | -                                                        |
+| [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light)                        | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
+| [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)                                | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
+| [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)                          | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
+| [Twitter like II](https://frontwizards.com/challenge/user-interface/twitter-like-II)                    | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
+| [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)                          | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
+| [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)                            | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
 
 </p>
 
@@ -172,30 +172,32 @@ npm run dev
 
 ## How to Review Your Solution
 
-## How to Review Your Solution
+### Accessibility Testing with axe-core
 
-- <a href="https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react" target="_blank">axe-core</a> is pre-integrated in the starter template. To use it:
-  1. Open your browser's Developer Tools (F12)
-  2. Check the Console tab while using your app
-  3. Review and fix accessibility errors that appear (ignore minor errors)
+The starter template comes with [axe-core](https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react) pre-integrated. To use it:
 
-- Test your app with keyboard to ensure full keyboard navigation (if applicable)  
+1. Open your browser's Developer Tools (F12)
+2. Check the Console tab while using your app
+3. Review and fix accessibility errors that appear (ignore minor errors)
 
-- Add ARIA labels to make your app understandable by screen readers  
+### Manual Testing
 
-- Use <a href="https://claude.ai/new" target="_blank">Claude</a> for a final accessibility & quality check.  
+- Test your app with keyboard navigation (if applicable)
+- Add appropriate ARIA labels for screen reader compatibility
 
-  **Example Prompt for Claude:**  
-  \`\`\`text
-  Review my code for accessibility and best practices:
+### AI-Powered Review
 
-  - Point out critical issues that must be fixed (if any)
-  - Rate the overall implementation (e.g., production-ready, needs work, etc.)
+You can use [Claude](https://claude.ai/new) for a final accessibility & quality check:
 
-  Here's my code:
-  \`\`\`
+```text
+Review my code for accessibility and best practices:
 
-  Then paste your code..
+- Point out critical issues that must be fixed (if any)
+- Rate the overall implementation (e.g., production-ready, needs work, etc.)
+
+Here's my code:
+[Paste your code here]
+```
 
 ## How to Contribute
 
