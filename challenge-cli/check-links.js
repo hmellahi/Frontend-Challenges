@@ -39,6 +39,7 @@ async function checkUrl(url) {
 function parseMarkdownTable(markdown) {
   const lines = markdown.split("\n");
   const completedProblems = new Set();
+  const uncompletedProblems = new Set();
 
   let isInUITable = false;
   let headerSeen = false;
@@ -60,13 +61,16 @@ function parseMarkdownTable(markdown) {
     // Process table rows
     if (isInUITable && headerSeen && line.startsWith("|")) {
       const columns = line.split("|").map((col) => col.trim());
-      // Check if problem is completed (has ✅)
-      if (columns.some((col) => col.includes("✅"))) {
-        // Extract problem link
-        const titleCol = columns[1];
-        const match = titleCol.match(/\[(.*?)\]\((.*?)\)/);
-        if (match) {
-          completedProblems.add(match[2]);
+      // Extract problem link
+      const titleCol = columns[1];
+      const match = titleCol.match(/\[(.*?)\]\((.*?)\)/);
+      if (match) {
+        const link = match[2];
+        // Check if problem is completed (has ✅)
+        if (columns.some((col) => col.includes("✅"))) {
+          completedProblems.add(link);
+        } else {
+          uncompletedProblems.add(link);
         }
       }
     }
@@ -77,13 +81,14 @@ function parseMarkdownTable(markdown) {
     }
   }
 
-  return completedProblems;
+  return { completedProblems, uncompletedProblems };
 }
 
 function extractLinks(markdown) {
   const links = [];
   const renderer = new marked.Renderer();
-  const completedProblems = parseMarkdownTable(markdown);
+  const { completedProblems, uncompletedProblems } =
+    parseMarkdownTable(markdown);
 
   renderer.link = (href, title, text) => {
     if (href.startsWith("http")) {
@@ -94,7 +99,9 @@ function extractLinks(markdown) {
         completedProblems.has(href) ||
         !href.includes("frontwizards.com/challenge")
       ) {
-        links.push(href);
+        links.push({ url: href, type: "active" });
+      } else if (uncompletedProblems.has(href)) {
+        links.push({ url: href, type: "disabled" });
       }
     }
     return "";
@@ -114,7 +121,19 @@ async function checkLinks() {
 
   console.log("Checking links...");
 
-  const results = await Promise.all(links.map(checkUrl));
+  const results = await Promise.all(
+    links.map(async (link) => {
+      if (link.type === "disabled") {
+        return {
+          url: link.url,
+          status: "disabled",
+          ok: true,
+          message: "Uncompleted problem - link disabled",
+        };
+      }
+      return checkUrl(link.url);
+    })
+  );
 
   // Report results
   let hasFailures = false;
@@ -125,6 +144,8 @@ async function checkLinks() {
       console.error(`❌ ${result.url} - ${result.status}`);
     } else if (result.status === "skipped") {
       console.log(`⏩ ${result.url} - ${result.message}`);
+    } else if (result.status === "disabled") {
+      console.log(`🔒 ${result.url} - ${result.message}`);
     } else {
       console.log(`✅ ${result.url}`);
     }

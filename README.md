@@ -77,17 +77,17 @@ Each challenge has:
 
 | Title                                                                                                   | Difficulty | Completed | Accessible | Solution                                                 |
 | ------------------------------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
-| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)                            | Easy       | -         | -          | -                                                        |
-| [Counter](https://frontwizards.com/challenge/user-interface/counter)                                    | Easy       | -         | -          | -                                                        |
-| [Rating Stars](https://frontwizards.com/challenge/user-interface/rating-stars)                          | Easy       | -         | -          | -                                                        |
-| [Simple Form I (without accessibility)](https://frontwizards.com/challenge/user-interface/build-form-1) | Easy       | -         | -          | -                                                        |
-| [Simple Form II (with accessibility)](https://frontwizards.com/challenge/user-interface/build-form-2)   | Easy       | -         | -          | -                                                        |
-| [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light)                        | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
-| [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)                                | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
-| [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)                          | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
-| [Twitter like II](https://frontwizards.com/challenge/user-interface/twitter-like-II)                    | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
-| [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)                          | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
-| [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)                            | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
+ | Hello World | Easy | - | - | - | 
+ | Counter | Easy | - | - | - | 
+ | Rating Stars | Easy | - | - | - | 
+ | Simple Form I (without accessibility) | Easy | - | - | - | 
+ | Simple Form II (with accessibility) | Easy | - | - | - | 
+ | Traffic light | Easy | ✅ | ✅ | [Solution](/problems/traffic-light/solutions/react-ts) | 
+ | File Tree | Medium | ✅ | ✅ | [Solution](/problems/file-tree/solutions/react-ts) | 
+ | Twitter like | Medium | ✅ | ✅ | [Solution](/problems/twitter-like/solutions/react-ts) | 
+ | Twitter like II | Medium | - | - | [Solution](/problems/twitter-like-II/solutions/react-ts) | 
+ | Whack a Mole | Medium | ✅ | ✅ | [Solution](/problems/whack-a-mole/solutions/react-ts) | 
+ | Wordle Game | Hard | ✅ | ✅ | [Solution](/problems/wordle-game/solutions/react-ts) | 
 
 </p>
 
