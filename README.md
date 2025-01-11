@@ -172,26 +172,30 @@ npm run dev
 
 ## How to Review Your Solution
 
-- Use automated accessibility checkers like [axe-core](https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react) to detect most accessibility issues.
+## How to Review Your Solution
 
-> [!NOTE]
-> axe-core is already included in the starter template.
+- <a href="https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react" target="_blank">axe-core</a> is pre-integrated in the starter template. To use it:
+  1. Open your browser's Developer Tools (F12)
+  2. Check the Console tab while using your app
+  3. Review and fix accessibility errors that appear (ignore minor errors)
 
-- Test your app with keyboard to ensure full keyboard navigation (if applicable).
-- Add ARIA labels to make your app understandable by screen readers.
-- Use [Claude](https://claude.ai/new) for a final accessibility & quality check.
+- Test your app with keyboard to ensure full keyboard navigation (if applicable)  
 
-  **Example Prompt for Claude:**
+- Add ARIA labels to make your app understandable by screen readers  
 
-  ```text
+- Use <a href="https://claude.ai/new" target="_blank">Claude</a> for a final accessibility & quality check.  
+
+  **Example Prompt for Claude:**  
+  \`\`\`text
   Review my code for accessibility and best practices:
 
   - Point out critical issues that must be fixed (if any)
   - Rate the overall implementation (e.g., production-ready, needs work, etc.)
 
   Here's my code:
-  [your code]
-  ```
+  \`\`\`
+
+  Then paste your code..
 
 ## How to Contribute
 
