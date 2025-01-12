@@ -75,19 +75,19 @@ Each challenge has:
 
 <p align="center">
 
-| Title                                                                                                   | Difficulty | Completed | Accessible | Solution                                                 |
-| ------------------------------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
- | Hello World | Easy | - | - | - | 
- | CountDown | Easy | - | - | - | 
- | Simple Form I (without accessibility) | Easy | - | - | - | 
- | Rating Stars | Easy | - | - | - | 
- | Simple Form II (with accessibility) | Easy | - | - | - | 
- | Traffic light | Easy | ✅ | ✅ | [Solution](/problems/traffic-light/solutions/react-ts) | 
- | File Tree | Medium | ✅ | ✅ | [Solution](/problems/file-tree/solutions/react-ts) | 
- | Twitter like | Medium | ✅ | ✅ | [Solution](/problems/twitter-like/solutions/react-ts) | 
- | Twitter like II | Medium | - | - | [Solution](/problems/twitter-like-II/solutions/react-ts) | 
- | Whack a Mole | Medium | ✅ | ✅ | [Solution](/problems/whack-a-mole/solutions/react-ts) | 
- | Wordle Game | Hard | ✅ | ✅ | [Solution](/problems/wordle-game/solutions/react-ts) | 
+| Title                                 | Difficulty | Completed | Accessible | Solution                                                 |
+| ------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
+| Hello World                           | Easy       | -         | -          | -                                                        |
+| CountDown                             | Easy       | -         | -          | -                                                        |
+| Simple Form I (without accessibility) | Easy       | -         | -          | -                                                        |
+| Rating Stars                          | Easy       | -         | -          | -                                                        |
+| Simple Form II (with accessibility)   | Easy       | -         | -          | -                                                        |
+| Traffic light                         | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
+| File Tree                             | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
+| Twitter like                          | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
+| Twitter like II                       | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
+| Whack a Mole                          | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
+| Wordle Game                           | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
 
 </p>
 
@@ -258,4 +258,4 @@ Please adhere to the following coding standards when submitting solutions:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. This license grants permission to individuals to use this software for both personal and commercial purposes, while providing liability protection for the authors.
+This project is licensed under a Non-Commercial License - see the [LICENSE](LICENSE) file for details. This license grants permission to individuals to use this software for non-commercial purposes only. Any commercial use is strictly prohibited.
