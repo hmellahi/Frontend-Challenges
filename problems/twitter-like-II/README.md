@@ -34,6 +34,6 @@ The `LikeButton` component accepts the following props:
 
 You could use this background with animated heart frames:
 
-```
+```text
 https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png
 ```

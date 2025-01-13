@@ -17,21 +17,23 @@ body {
 
 .heart {
   background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
-  background-position: left;
+  /* start from the left (first frame) */
+  background-position: left; 
+  /* 2900% is the total width of the animation */
+  /* zooming into the first heart frame */
   background-size: 2900%;
   background-repeat: no-repeat;
-  scale: 2;
-}
-
-.heart:hover {
-  /* background-position: right; */
+  /* scale up the heart */
+  scale: 2
 }
 
 .heart-filled {
+  /* zooming into the last heart frame */
   background-position: right;
 }
 
 .is_animating {
+  /* moving from left to right, frame by frame */
   animation: heart-burst .8s steps(28) 1;
 }
 

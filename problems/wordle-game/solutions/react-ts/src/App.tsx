@@ -55,7 +55,7 @@ const Cell = ({ value, backgroundClass }: CellProps) => {
   return (
     <div
       className={cn(
-        "aspect-square w-full border-2 border-[#3a3a3d] text-white text-2xl md:text-4xl font-extrabold",
+        "aspect-square w-full border-2 border-[#3a3a3d] text-white text-lg md:text-2xl font-extrabold",
         "flex items-center justify-center uppercase",
         backgroundClass !== CellColor.DEFAULT && "cell-animating",
         value !== null && "cell-filled",
@@ -207,25 +207,25 @@ export default function App() {
       <div role="status" aria-live="polite" className="sr-only">
         {gameStatusMessage}
       </div>
-      <div className="px-4 py-12 md:py-24 max-w-2xl mx-auto flex flex-col items-center">
-        <h1 className="text-5xl md:text-7xl mb-6 md:mb-10">WORDLE</h1>
+      <div className="px-2 py-6 md:py-12 max-w-xl mx-auto flex flex-col items-center">
+        <h1 className="text-3xl md:text-5xl mb-4 md:mb-6">WORDLE</h1>
         <div
           className={cn(
-            "flex justify-between items-center w-full max-w-sm mb-6 md:mb-8 h-12",
+            "flex justify-between items-center w-full max-w-xs mb-4 md:mb-6 h-8",
             !isGameOver && "invisible"
           )}
         >
-          <span className="mr-4">{gameStatusMessage}</span>
+          <span className="mr-4 text-sm">{gameStatusMessage}</span>
           <button
             onClick={reset}
-            className="bg-white rounded-md text-black px-4 py-2"
+            className="bg-white rounded-md text-black px-3 py-1 text-sm"
           >
             Reset
           </button>
         </div>
 
         <div
-          className="grid gap-2 md:gap-4 grid-cols-5 w-full max-w-sm"
+          className="grid gap-1 md:gap-2 grid-cols-5 w-full max-w-xs"
           role="group"
           aria-label="Wordle game grid"
           aria-describedby="wordle-instructions"
