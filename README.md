@@ -258,4 +258,4 @@ Please adhere to the following coding standards when submitting solutions:
 
 ## License
 
-This project is licensed under a Non-Commercial License - see the [LICENSE](LICENSE) file for details. This license grants permission to individuals to use this software for non-commercial purposes only. Any commercial use is strictly prohibited.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
