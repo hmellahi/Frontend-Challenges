@@ -28,7 +28,7 @@ function LikeButtonSVG({
 
 export default function App() {
   return (
-    <main className="bg-gray-400 h-full">
+    <main className="bg-gray-700 h-full">
       <LikeButtonSVG width={50} height={50} isLiked={true} />
       <LikeButtonSVG width={50} height={50} isLiked={false} />
     </main>
