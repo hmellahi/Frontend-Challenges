@@ -98,7 +98,7 @@ Each challenge has:
 | Category                    | Title                                                                                                                               | Difficulty |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | Basic Functions             | [Create Hello World Function](https://leetcode.com/problems/create-hello-world-function/description/)                               | Easy       |
-| Basic Functions             | [Counter](https://leetcode.com/problems/counter/description/)                                                                       | Easy       |
+| Closures                    | [Counter](https://leetcode.com/problems/counter/description/)                                                                       | Easy       |
 | Closures                    | [To Be Or Not To Be](https://leetcode.com/problems/to-be-or-not-to-be/description/)                                                 | Easy       |
 | Closures                    | [Counter II](https://leetcode.com/problems/counter-ii/description/)                                                                 | Easy       |
 | Basic Array Transformations | [Apply Transform Over Each Element in Array](https://leetcode.com/problems/apply-transform-over-each-element-in-array/description/) | Easy       |
