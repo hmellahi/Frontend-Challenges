@@ -216,7 +216,7 @@ Before starting work on a pull request (PR), please create an issue to discuss y
 - [ ] Set up GitHub Actions for pull requests to:
   - Validate solutions can be built successfully
   - Accessibility check
-- [ ] Extend the CI pipeline for the main branch too
+- [ ] Extend the CI/CD pipeline for the main branch too
 - [ ] Add resources for learning key concepts related to the problem
 
 ## How To Share Your Solution
