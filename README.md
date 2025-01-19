@@ -87,7 +87,7 @@ Each challenge has:
 </details>
 
 <details>
-<summary>### Data Structures and Algorithms</summary>
+<summary>Data Structures and Algorithms</summary>
 
 | Category            | Title                                                                                                                                  | Difficulty |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
