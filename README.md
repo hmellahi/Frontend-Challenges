@@ -169,15 +169,30 @@ npm run dev
 
 ### ♿ Accessibility Testing with axe-core
 
-[Previous content remains the same...]
+The starter template comes with [axe-core](https://larsmagnus.co/blog/how-to-test-for-accessibility-with-axe-core-in-next-js-and-react) pre-integrated. To use it:
+
+1. 🔍 Open your browser's Developer Tools (F12)
+2. 📝 Check the Console tab while using your app
+3. 🛠️ Review and fix accessibility errors that appear (ignore minor errors)
 
 ### 🔄 Manual Testing
 
-[Previous content remains the same...]
+- ⌨️ Test your app with keyboard navigation (if applicable)
+- 🔊 Add appropriate ARIA labels for screen reader compatibility
 
 ### 🤖 AI-Powered Review
 
-[Previous content remains the same...]
+You can use [Claude](https://claude.ai/new) for a final accessibility & quality check:
+
+```text
+Review my code for accessibility and best practices:
+
+- Point out critical issues that must be fixed (if any)
+- Rate the overall implementation (e.g., production-ready, needs work, etc.)
+
+Here's my code:
+[Paste your code here]
+```
 
 ## 🤝 How to Contribute
 
@@ -190,15 +205,44 @@ Before starting work on a pull request (PR), please create an issue to discuss y
 
 ### 📋 TODOs:
 
-[Previous TODOs content remains the same...]
+- [ ] 🎯 Add more beginner-friendly UI problems (you can check the non solved UI problems in the UI table)
+- [ ] ⚙️ Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function
+- [ ] 📸 Add a screenshot img of each problem in the README, could be automated?
+- [ ] 🔄 Set up GitHub Actions for pull requests to:
+  - ✅ Validate solutions can be built successfully
+  - ♿ Accessibility check
+- [ ] 🚀 Extend the CI/CD pipeline for the main branch too
+- [ ] 📚 Add resources for learning key concepts related to the problem
 
 ## 📢 How To Share Your Solution
 
-[Previous content remains the same...]
+> [!NOTE]
+> Share your solution only if you believe it's good and others can learn from it.
+
+To share your solution follow the process for [making a pull request to an open-source project](https://github.com/gabrieldemarmiesse/getting_started_open_source).
+
+In short:
+
+1. 🍴 Fork this repo and clone it
+2. 🌿 Create a branch and make your change
+3. ⬆️ Push your branch to your fork
+4. 🤝 Open a PR against this repo
 
 ## ➕ How To Add New Problem
 
-[Previous content remains the same...]
+If you wanna work with React, you can use the starter template.
+
+If you want to create a new problem called 'example-problem', use the create command:
+
+```bash
+challenge-cli create "example-problem"
+
+cd problems/example-problem/solutions/react-ts
+
+npm install
+
+npm run dev
+```
 
 ## 📐 Coding Standards
 
