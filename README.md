@@ -14,34 +14,35 @@ Each challenge has:
 
 ## 📚 Table of Contents
 
-- [🚀 Frontend Challenges](#frontend-challenges)
-  - [📚 Table of Contents](#table-of-contents)
-  - [💪 Problems](#problems)
-  - [🎯 Use Cases](#use-cases)
-  - [🏃‍♂️ Getting Started](#getting-started)
-  - [🔍 How to Review Your Solution](#how-to-review-your-solution)
-  - [🤝 How to Contribute](#how-to-contribute)
-    - [📋 TODOs](#todos)
-  - [📢 How To Share Your Solution](#how-to-share-your-solution)
-  - [➕ How To Add New Problem](#how-to-add-new-problem)
-  - [📐 Coding Standards](#coding-standards)
+- [🚀 Frontend Challenges](#-frontend-challenges)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [💪 Problems](#-problems)
+  - [🎯 Use Cases](#-use-cases)
+  - [🏃‍♂️ Getting Started](#️-getting-started)
+  - [🔍 How to Review Your Solution](#-how-to-review-your-solution)
+  - [🤝 How to Contribute](#-how-to-contribute)
+    - [📋 TODOs](#-todos)
+  - [📢 How To Share Your Solution](#-how-to-share-your-solution)
+  - [➕ How To Add New Problem](#-how-to-add-new-problem)
+  - [📐 Coding Standards](#-coding-standards)
+  - [📜 License](#-license)
 
 ## 💪 Problems
 
 <details>
 <summary>🎨 User Interface Challenges</summary>
 
-| Title                                                                                     | Difficulty | Completed | Accessible | Solution                                                 |
-| ----------------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
-| Hello World                                                                               | Easy       | -         | -          | -                                                        |
-| CountDown                                                                                 | Easy       | -         | -          | -                                                        |
-| Simple Form I (without accessibility)                                                     | Easy       | -         | -          | -                                                        |
-| Rating Stars                                                                              | Easy       | -         | -          | -                                                        |
-| Simple Form II (with accessibility)                                                       | Easy       | -         | -          | -                                                        |
+| Title                                                                            | Difficulty | Completed | Accessible | Solution                                                 |
+| -------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
+| Hello World                                                                      | Easy       | -         | -          | -                                                        |
+| CountDown                                                                        | Easy       | -         | -          | -                                                        |
+| Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
+| Rating Stars                                                                     | Easy       | -         | -          | -                                                        |
+| Simple Form II (with accessibility)                                              | Easy       | -         | -          | -                                                        |
 | [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light) | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
 | [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)         | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
 | [Twitter like](https://frontwizards.com/challenge/user-interface/twitter-like)   | Medium     | ✅        | ✅         | [Solution](/problems/twitter-like/solutions/react-ts)    |
-| Twitter like II                                                                           | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
+| Twitter like II                                                                  | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
 | [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)   | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
 | [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)     | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
 
@@ -49,7 +50,6 @@ Each challenge has:
 
 <details>
 <summary>⚙️ Utility Functions</summary>
-
 
 | Category                    | Title                                                                                                                               | Difficulty |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------- |
