@@ -37,7 +37,7 @@ Each challenge has:
 | Hello World                                                                      | Easy       | -         | -          | -                                                        |
 | CountDown                                                                        | Easy       | -         | -          | -                                                        |
 | Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
-| Rating Stars                                                                     | Easy       | -         | -          | -                                                        |
+| Star Rating                                                                      | Easy       | -         | -          | -                                                        |
 | Simple Form II (with accessibility)                                              | Easy       | -         | -          | -                                                        |
 | [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light) | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
 | [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)         | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
