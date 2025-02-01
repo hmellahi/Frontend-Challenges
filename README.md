@@ -37,7 +37,7 @@ Each challenge has:
 | Hello World                                                                      | Easy       | -         | -          | -                                                        |
 | CountDown                                                                        | Easy       | -         | -          | -                                                        |
 | Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
-| Star Rating                                                                      | Easy       | -         | -          | -                                                        |
+| [Star Rating](https://frontwizards.com/challenge/user-interface/star-rating)     | Easy       | ✅        | ✅         | [Solution](/problems/star-rating/solutions/react-ts)     |
 | Simple Form II (with accessibility)                                              | Easy       | -         | -          | -                                                        |
 | [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light) | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
 | [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)         | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
@@ -126,7 +126,7 @@ Each challenge has:
 ## 🎯 Use Cases
 
 - 👨‍💼 Employers evaluating frontend developer skills
-- 👩‍💻 Frontend developers seeking practice with coding challenges
+- 👩‍💻 Frontend/JavaScript developers seeking practice with coding challenges
 
 ## 🏃‍♂️ Getting Started
 
@@ -248,8 +248,8 @@ npm run dev
 
 Please adhere to the following coding standards when submitting solutions:
 
-- ♿ Ensure your app is accessible and follows best practices
-- 🎨 Format your code
+- Follow the [How to Review Your Solution](#-how-to-review-your-solution) guideline.
+- 🎨 Format your code properly.
 
 ## 📜 License
 

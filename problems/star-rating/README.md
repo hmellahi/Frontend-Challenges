@@ -15,14 +15,17 @@ Create a reusable star rating component that allows users to select a rating bet
 - While hovering over a star, all stars up to the hovered one should visually indicate the hover state by changing color to yellow.
 - Clicking on a star should update the rating corresponding to the clicked star.
 
-### Accessibility Requirements
-- The component should be accessible via keyboard navigation.
-- Stars should have appropriate ARIA labels for screen readers.
-
 ## Example Usage
 
 ```tsx
-<StarRating 
-  rating={3} 
-  onChange={(newRating) => console.log(newRating)} 
-/>
+<StarRating rating={3} onChange={(newRating) => console.log(newRating)} />
+```
+
+## Bonus
+
+- Add animation/transition effects when changing star states
+- Accessibility Features:
+  - The component should be navigable using keyboard (Tab and arrow keys)
+  - Implement proper ARIA labels and roles for screen readers
+  - Add appropriate focus indicators
+- Make the component customizable (size, colors, number of stars)

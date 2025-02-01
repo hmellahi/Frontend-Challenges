@@ -2,7 +2,7 @@
 
 const { program } = require("commander");
 const { startChallenge } = require("./start-challenge");
-const { createChallenge } = require("./create-challenge");
+const { createChallenge, createStarter } = require("./create-challenge");
 const { checkLinks } = require("./check-links");
 const { validateProjectRoot } = require("./utils");
 // const { listChallenges } = require("./list-challenges");
@@ -12,12 +12,17 @@ program
   .description("CLI for managing coding challenges and solutions");
 
 program
-  .command("create <challengeName> [challengePath]")
+  .command("create <project-name>")
+  .option("--no-starter", "Skip creating starter template")
   .description("Create a new challenge")
-  .action((challengeName, challengePath) => {
+  .action((projectName, options) => {
     validateProjectRoot();
-    console.log(`Creating new challenge: ${challengeName}`);
-    const solutionPath = createChallenge(challengeName, challengePath);
+    console.log(`Creating new challenge: ${projectName}`);
+    const solutionPath = createChallenge(
+      projectName,
+      "problems",
+      options.starter
+    );
     console.log(
       `To begin working on the challenge\n run: cd "${solutionPath}"`
     );
@@ -53,6 +58,16 @@ program
     validateProjectRoot();
     console.log("Available challenges:");
     // listChallenges();
+  });
+
+program
+  .command("create-starter <project-name>")
+  .description("Create a starter template for an existing challenge")
+  .action((projectName) => {
+    validateProjectRoot();
+    console.log(`Creating starter template for: ${projectName}`);
+    const starterPath = createStarter(projectName);
+    console.log(`Starter template created at: ${starterPath}`);
   });
 
 program.parse(process.argv);

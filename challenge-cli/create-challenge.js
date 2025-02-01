@@ -16,8 +16,16 @@ function createFullPath(projectPath, projectName) {
 }
 
 function copyStarterProject(sourcePath, destinationPath) {
+  // Ensure source path exists
+  if (!fs.existsSync(sourcePath)) {
+    throw new Error(`Source path ${sourcePath} does not exist`);
+  }
+
+  // Create destination directory if it doesn't exist
+  fs.mkdirSync(destinationPath, { recursive: true });
+
   execSync(
-    `rsync -av --progress ${sourcePath}/ ${destinationPath} --exclude node_modules`
+    `rsync -av --progress "${sourcePath}/" "${destinationPath}" --exclude node_modules`
   );
 }
 
@@ -35,27 +43,61 @@ function replaceInFiles(directory, oldValue, newValue, filePattern) {
   });
 }
 
-function createChallenge(projectName, projectPath = "problems") {
+function createStarter(projectName, projectPath = "problems") {
+  const fullPath = path.join(projectPath, projectName, "starter");
+
+  // Copy from an existing problem's solution as template
+  copyStarterProject(
+    path.join("problems", "star-rating", "starter"),
+    path.join(projectPath, projectName, "starter")
+  );
+
+  // Update package.json
+  replaceInFiles(fullPath, "starter", projectName, "package.json");
+
+  console.log(`Starter created successfully at '${fullPath}'`);
+  return fullPath;
+}
+
+function createChallenge(
+  projectName,
+  projectPath = "problems",
+  createStarterTemplate = true
+) {
   const challengeName = capitalizeProjectName(projectName);
   const fullPath = createFullPath(projectPath, projectName);
 
-  copyStarterProject("starter", fullPath);
+  // Create solutions/react-ts directory using star-rating as template
+  copyStarterProject(
+    path.join("problems", "star-rating", "solutions", "react-ts"),
+    path.join(fullPath, "solutions", "react-ts")
+  );
+
   replaceInFiles(
-    `${fullPath}/solutions/react-ts`,
+    path.join(fullPath, "solutions", "react-ts"),
     "starter",
     projectName,
     "package.json"
   );
   replaceInFiles(fullPath, "Example Challenge", challengeName, "README.md");
 
-  process.chdir(`${fullPath}/solutions/react-ts`);
+  if (createStarterTemplate) {
+    createStarter(projectName, projectPath);
+  }
+
+  process.chdir(path.join(fullPath, "solutions", "react-ts"));
   execSync("npm install --loglevel=silent --logs-max=0");
 
   console.log(
     `Project '${projectName}' created successfully at '${fullPath}'.`
   );
 
-  return `${fullPath}/solutions/react-ts`;
+  return path.join(fullPath, "solutions", "react-ts");
 }
 
-module.exports = { createChallenge };
+module.exports = {
+  createChallenge,
+  createStarter,
+  copyStarterProject,
+  replaceInFiles,
+};
