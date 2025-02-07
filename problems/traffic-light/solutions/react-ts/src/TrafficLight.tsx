@@ -2,8 +2,22 @@ import { useEffect, useState } from "react";
 import { Config } from "./types";
 import { cn } from "./utils/cn";
 
-function Light({ backgroundColor }: { backgroundColor: string }) {
-  return <div className="traffic-light" style={{ backgroundColor }} />;
+function Light({
+  backgroundColor,
+  active,
+}: {
+  backgroundColor: string;
+  active: boolean;
+}) {
+  return (
+    <div
+      className={cn([
+        "w-20 h-20 rounded-full transition-all duration-300",
+        active ? "shadow-[0_0_10px] shadow-current" : "opacity-40",
+      ])}
+      style={{ backgroundColor }}
+    />
+  );
 }
 
 export default function TrafficLight({
@@ -28,19 +42,18 @@ export default function TrafficLight({
 
   return (
     <div
-      aria-live="polite"
+      role="status"
       aria-label={`Traffic light is ${currentLight}`}
       className={cn([
-        "traffic-light-container",
-        layout === "vertical" && "traffic-light-container--vertical",
+        "p-6 rounded-2xl flex gap-4 bg-gray-900 shadow-xl",
+        layout === "vertical" ? "flex-col" : "flex-row",
       ])}
     >
       {Object.keys(config).map((color) => (
         <Light
           key={color}
-          backgroundColor={
-            color === currentLight ? config[color].backgroundColor : "grey"
-          }
+          active={color === currentLight}
+          backgroundColor={config[color].backgroundColor}
         />
       ))}
     </div>

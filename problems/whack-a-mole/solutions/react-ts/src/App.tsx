@@ -10,7 +10,7 @@ const DefaultGrid = Array.from({ length: GRID_SIZE }).fill(0);
 const App = () => {
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(0);
-  const timeout = useRef<NodeJS.Timeout | null>(null);
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isGameOver, setIsGameOver] = useState(true);
   const isFirstRound = timer === 0;
   const [gameGrid, setGameGrid] = useState([...DefaultGrid]);

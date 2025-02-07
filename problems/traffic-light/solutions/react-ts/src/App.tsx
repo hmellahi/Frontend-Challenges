@@ -23,12 +23,9 @@ const config: Config = {
 
 export default function App() {
   return (
-    <main className="container">
-      <TrafficLight
-        layout="horizontal"
-        config={config}
-      />
+    <main className="items-center flex flex-col gap-5 p-20">
       <TrafficLight config={config} />
+      <TrafficLight layout="horizontal" config={config} />
     </main>
   );
 }
