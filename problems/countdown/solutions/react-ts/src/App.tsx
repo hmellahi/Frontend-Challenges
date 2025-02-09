@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [count, setCount] = useState(4);
+  const [count, setCount] = useState(7);
 
   useEffect(() => {
     const interval = setInterval(() => {
