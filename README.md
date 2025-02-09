@@ -34,7 +34,7 @@ Each challenge has:
 
 | Title                                                                            | Difficulty | Completed | Accessible | Solution                                                 |
 | -------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
-| Hello World                                                                      | Easy       | -         | -          | -                                                        |
+| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)     | Easy       | -         | -          | [Solution](/problems/hello-world/solutions/react-ts)     |
 | CountDown                                                                        | Easy       | -         | -          | -                                                        |
 | Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
 | [Star Rating](https://frontwizards.com/challenge/user-interface/star-rating)     | Easy       | ✅        | ✅         | [Solution](/problems/star-rating/solutions/react-ts)     |
@@ -213,6 +213,7 @@ Before starting work on a pull request (PR), please create an issue to discuss y
   - ♿ Accessibility check
 - [ ] 🚀 Extend the CI/CD pipeline for the main branch too
 - [ ] 📚 Add resources for learning key concepts related to the problem
+- [ ] 🧪 Add Unit tests for challenge-cli
 
 ## 📢 How To Share Your Solution
 
