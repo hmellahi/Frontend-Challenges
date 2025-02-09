@@ -2,7 +2,7 @@
 
 const { program } = require("commander");
 const { startChallenge } = require("./start-challenge");
-const { createChallenge } = require("./create-challenge");
+const { createChallenge, createStarter } = require("./create-challenge");
 const { checkLinks } = require("./check-links");
 const { validateProjectRoot } = require("./utils");
 // const { listChallenges } = require("./list-challenges");
@@ -14,10 +14,15 @@ program
 program
   .command("create <challengeName> [challengePath]")
   .description("Create a new challenge")
-  .action((challengeName, challengePath) => {
+  .option("--no-starter", "Skip creating starter project")
+  .action((challengeName, challengePath, options) => {
     validateProjectRoot();
     console.log(`Creating new challenge: ${challengeName}`);
-    const solutionPath = createChallenge(challengeName, challengePath);
+    const solutionPath = createChallenge(
+      challengeName,
+      challengePath,
+      options.starter
+    );
     console.log(
       `To begin working on the challenge\n run: cd "${solutionPath}"`
     );
@@ -53,6 +58,16 @@ program
     validateProjectRoot();
     console.log("Available challenges:");
     // listChallenges();
+  });
+
+program
+  .command("create-starter <problemName>")
+  .description("Create a starter template for an existing challenge")
+  .action((problemName) => {
+    validateProjectRoot();
+    console.log(`Creating starter for challenge: ${problemName}`);
+    const starterPath = createStarter(problemName);
+    console.log(`Starter created at: ${starterPath}`);
   });
 
 program.parse(process.argv);

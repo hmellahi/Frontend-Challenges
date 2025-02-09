@@ -34,10 +34,10 @@ Each challenge has:
 
 | Title                                                                            | Difficulty | Completed | Accessible | Solution                                                 |
 | -------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
-| Hello World                                                                      | Easy       | -         | -          | -                                                        |
-| CountDown                                                                        | Easy       | -         | -          | -                                                        |
+| [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)     | Easy       | ✅        | ✅         | [Solution](/problems/hello-world/solutions/react-ts)     |
+| [CountDown](https://frontwizards.com/challenge/user-interface/countdown)         | Easy       | ✅        | ✅         | [Solution](/problems/countdown/solutions/react-ts)       |
 | Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
-| Rating Stars                                                                     | Easy       | -         | -          | -                                                        |
+| [Star Rating](https://frontwizards.com/challenge/user-interface/star-rating)     | Easy       | ✅        | ✅         | [Solution](/problems/star-rating/solutions/react-ts)     |
 | Simple Form II (with accessibility)                                              | Easy       | -         | -          | -                                                        |
 | [Traffic light](https://frontwizards.com/challenge/user-interface/traffic-light) | Easy       | ✅        | ✅         | [Solution](/problems/traffic-light/solutions/react-ts)   |
 | [File Tree](https://frontwizards.com/challenge/user-interface/file-tree)         | Medium     | ✅        | ✅         | [Solution](/problems/file-tree/solutions/react-ts)       |
@@ -126,7 +126,7 @@ Each challenge has:
 ## 🎯 Use Cases
 
 - 👨‍💼 Employers evaluating frontend developer skills
-- 👩‍💻 Frontend developers seeking practice with coding challenges
+- 👩‍💻 Frontend/JavaScript developers seeking practice with coding challenges
 
 ## 🏃‍♂️ Getting Started
 
@@ -213,6 +213,7 @@ Before starting work on a pull request (PR), please create an issue to discuss y
   - ♿ Accessibility check
 - [ ] 🚀 Extend the CI/CD pipeline for the main branch too
 - [ ] 📚 Add resources for learning key concepts related to the problem
+- [ ] 🧪 Add Unit tests for challenge-cli
 
 ## 📢 How To Share Your Solution
 
@@ -248,8 +249,8 @@ npm run dev
 
 Please adhere to the following coding standards when submitting solutions:
 
-- ♿ Ensure your app is accessible and follows best practices
-- 🎨 Format your code
+- Follow the [How to Review Your Solution](#-how-to-review-your-solution) guideline.
+- 🎨 Format your code properly.
 
 ## 📜 License
 
