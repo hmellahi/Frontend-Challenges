@@ -12,15 +12,15 @@ program
   .description("CLI for managing coding challenges and solutions");
 
 program
-  .command("create <project-name>")
-  .option("--no-starter", "Skip creating starter template")
+  .command("create <challengeName> [challengePath]")
   .description("Create a new challenge")
-  .action((projectName, options) => {
+  .option("--no-starter", "Skip creating starter project")
+  .action((challengeName, challengePath, options) => {
     validateProjectRoot();
-    console.log(`Creating new challenge: ${projectName}`);
+    console.log(`Creating new challenge: ${challengeName}`);
     const solutionPath = createChallenge(
-      projectName,
-      "problems",
+      challengeName,
+      challengePath,
       options.starter
     );
     console.log(
@@ -61,13 +61,13 @@ program
   });
 
 program
-  .command("create-starter <project-name>")
+  .command("create-starter <problemName>")
   .description("Create a starter template for an existing challenge")
-  .action((projectName) => {
+  .action((problemName) => {
     validateProjectRoot();
-    console.log(`Creating starter template for: ${projectName}`);
-    const starterPath = createStarter(projectName);
-    console.log(`Starter template created at: ${starterPath}`);
+    console.log(`Creating starter for challenge: ${problemName}`);
+    const starterPath = createStarter(problemName);
+    console.log(`Starter created at: ${starterPath}`);
   });
 
 program.parse(process.argv);

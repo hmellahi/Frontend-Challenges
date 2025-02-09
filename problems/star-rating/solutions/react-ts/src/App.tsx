@@ -35,7 +35,7 @@ const StarRating = ({
           key={starNumber}
           aria-label={`Rate ${starNumber} star${starNumber === 1 ? "" : "s"}`}
           aria-pressed={rating === starNumber}
-          className={`p-1 hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded`}
+          className={`p-1 hover:scale-110 transition-transform rounded`}
           onMouseEnter={() => setHoverRating(starNumber)}
           onMouseLeave={() => setHoverRating(0)}
           onClick={() => onChange(starNumber)}
@@ -63,7 +63,6 @@ const StarRating = ({
   );
 };
 
-// Example usage component
 export default function App() {
   const [rating, setRating] = useState(3);
 

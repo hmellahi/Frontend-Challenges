@@ -18,14 +18,16 @@ Create a reusable star rating component that allows users to select a rating bet
 ## Example Usage
 
 ```tsx
-<StarRating rating={3} onChange={(newRating) => console.log(newRating)} />
+const [rating, setRating] = useState(4);
+
+<StarRating rating={rating} onChange={setRating} />
 ```
 
 ## Bonus
 
 - Add animation/transition effects when changing star states
 - Accessibility Features:
-  - The component should be navigable using keyboard (Tab and arrow keys)
+  - The component should be navigable using keyboard (Arrow keys)
   - Implement proper ARIA labels and roles for screen readers
-  - Add appropriate focus indicators
-- Make the component customizable (size, colors, number of stars)
+- Make the component customizable (size, number of stars)
+- Write unit tests (eg: using vitest)

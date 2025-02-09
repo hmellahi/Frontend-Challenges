@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 function findProjectRoot(currentPath = process.cwd()) {
   if (currentPath === path.parse(currentPath).root) {
@@ -34,7 +35,31 @@ function validateProjectRoot() {
   return projectRoot;
 }
 
+function copyProject(sourcePath, destinationPath) {
+  // Create destination directory if it doesn't exist
+  fs.mkdirSync(destinationPath, { recursive: true });
+
+  // Copy project files excluding node_modules
+  fs.cpSync(sourcePath, destinationPath, {
+    recursive: true,
+    filter: (src) => !src.includes("node_modules"),
+  });
+
+  // Install dependencies
+  process.chdir(destinationPath);
+  try {
+    execSync("npm install --loglevel=silent --logs-max=0", {
+      stdio: "inherit",
+    });
+  } catch (error) {
+    console.error("Error running npm install:", error.message);
+  }
+
+  return destinationPath;
+}
+
 module.exports = {
   findProjectRoot,
   validateProjectRoot,
+  copyProject,
 };
