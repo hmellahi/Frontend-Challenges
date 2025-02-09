@@ -70,6 +70,9 @@ export default function App() {
     <main className="h-screen flex flex-col items-center justify-center">
       <StarRating rating={rating} onChange={setRating} size={48} />
       <p className="mt-2 text-xl text-gray-300">Selected rating: {rating}</p>
+      <p className="mt-2 text-gray-300 text-sm">
+        (Try pressing left and right arrow keys to see if it works)
+      </p>
     </main>
   );
 }

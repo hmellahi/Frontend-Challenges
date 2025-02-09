@@ -4,17 +4,11 @@ import { Star } from "lucide-react";
 
 interface StarRatingProps {
   rating: number;
+  onChange: (rating: number) => void;
 }
 
 const StarRating = ({ rating = 0, onChange }: StarRatingProps) => {
   return (
-    // <Star
-    //   size={10}
-    //   className={`transition-colors ${
-    //       ? "fill-yellow-400 stroke-yellow-400"
-    //       : "fill-transparent stroke-gray-400"
-    //   }`}
-    // />
     <div className="flex gap-2">
       <Star size={60} className={`fill-yellow-400 stroke-yellow-400`} />
       <Star size={60} className={`fill-transparent stroke-gray-400"`} />
@@ -27,7 +21,7 @@ export default function App() {
 
   return (
     <main className="h-screen flex flex-col items-center justify-center">
-      <StarRating rating={rating} onChange={setRating} size={48} />
+      <StarRating rating={rating} onChange={setRating} />
       <p className="mt-2 text-xl text-gray-300">Selected rating: {rating}</p>
     </main>
   );
