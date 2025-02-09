@@ -22,16 +22,25 @@ function copyStarterProject(sourcePath, destinationPath) {
   );
 }
 
-function replaceInFiles(directory, oldValue, newValue, filePattern) {
-  const files = fs.readdirSync(directory);
+function replaceInFiles(directoryPath, oldValue, newValue, filePattern) {
+  // Check if directory exists first
+  if (!fs.existsSync(directoryPath)) {
+    console.error(`Directory does not exist: ${directoryPath}`);
+    return;
+  }
+
+  const files = fs.readdirSync(directoryPath);
   files.forEach((file) => {
-    const filePath = path.join(directory, file);
+    const filePath = path.join(directoryPath, file);
     if (fs.statSync(filePath).isDirectory()) {
       replaceInFiles(filePath, oldValue, newValue, filePattern);
     } else if (file === filePattern) {
-      let content = fs.readFileSync(filePath, "utf8");
-      content = content.replace(new RegExp(oldValue, "g"), newValue);
-      fs.writeFileSync(filePath, content);
+      // Check if file exists before trying to read it
+      if (fs.existsSync(filePath)) {
+        let content = fs.readFileSync(filePath, "utf8");
+        content = content.replace(new RegExp(oldValue, "g"), newValue);
+        fs.writeFileSync(filePath, content);
+      }
     }
   });
 }
@@ -72,10 +81,14 @@ function createChallenge(
 
   // Create solutions directory and copy starter as first solution
   const solutionPath = path.join(fullPath, "solutions/react-ts");
+  fs.mkdirSync(path.dirname(solutionPath), { recursive: true });
+
+  // Copy the project and wait for it to complete
   copyProject("starter/solutions/react-ts", solutionPath);
 
-  // Update project names in files
+  // update package.json project name from "starter" to projectName
   replaceInFiles(solutionPath, "starter", projectName, "package.json");
+  // Replace "Example Challenge" in README.md with the challenge name
   replaceInFiles(fullPath, "Example Challenge", challengeName, "README.md");
 
   // Create starter if requested

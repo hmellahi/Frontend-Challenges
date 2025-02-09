@@ -35,7 +35,7 @@ Each challenge has:
 | Title                                                                            | Difficulty | Completed | Accessible | Solution                                                 |
 | -------------------------------------------------------------------------------- | ---------- | --------- | ---------- | -------------------------------------------------------- |
 | [Hello World](https://frontwizards.com/challenge/user-interface/hello-world)     | Easy       | -         | -          | [Solution](/problems/hello-world/solutions/react-ts)     |
-| CountDown                                                                        | Easy       | -         | -          | -                                                        |
+| [CountDown](https://frontwizards.com/challenge/user-interface/countdown)         | Easy       | -         | -          | [Solution](/problems/countdown/solutions/react-ts)       |
 | Simple Form I (without accessibility)                                            | Easy       | -         | -          | -                                                        |
 | [Star Rating](https://frontwizards.com/challenge/user-interface/star-rating)     | Easy       | ✅        | ✅         | [Solution](/problems/star-rating/solutions/react-ts)     |
 | Simple Form II (with accessibility)                                              | Easy       | -         | -          | -                                                        |

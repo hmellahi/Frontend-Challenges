@@ -45,6 +45,14 @@ function copyProject(sourcePath, destinationPath) {
     filter: (src) => !src.includes("node_modules"),
   });
 
+  // Explicitly copy the README.md from the starter directory
+  const readmeSourcePath = path.join(sourcePath, "../../README.md");
+  const readmeDestinationPath = path.join(destinationPath, "README.md");
+  if (fs.existsSync(readmeSourcePath)) {
+    fs.copyFileSync(readmeSourcePath, readmeDestinationPath);
+  }
+
+  const originalCwd = process.cwd();
   // Install dependencies
   process.chdir(destinationPath);
   try {
@@ -54,6 +62,9 @@ function copyProject(sourcePath, destinationPath) {
   } catch (error) {
     console.error("Error running npm install:", error.message);
   }
+
+  // revert cwd to original
+  process.chdir(originalCwd);
 
   return destinationPath;
 }
