@@ -45,8 +45,8 @@ Each challenge has:
 | Twitter like II                                                                  | Medium     | -         | -          | [Solution](/problems/twitter-like-II/solutions/react-ts) |
 | [Whack a Mole](https://frontwizards.com/challenge/user-interface/whack-a-mole)   | Medium     | ✅        | ✅         | [Solution](/problems/whack-a-mole/solutions/react-ts)    |
 | [Wordle Game](https://frontwizards.com/challenge/user-interface/wordle-game)     | Hard       | ✅        | ✅         | [Solution](/problems/wordle-game/solutions/react-ts)     |
-| Memory Card I                                                                    | Hard       | -         | -          | -                                                        |
-| Memory Card II                                                                   | Hard       | -         | -          | -                                                        |
+| Memory Game I                                                                    | Hard       | -         | -          | -                                                        |
+| Memory Game II                                                                   | Hard       | -         | -          | -                                                        |
 | Simple Endless Runner                                                            | Hard       | -         | -          | -                                                        |
 
 </details>
