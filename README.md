@@ -208,7 +208,7 @@ Before starting work on a pull request (PR), please create an issue to discuss y
 
 ### 📋 TODOs:
 
-- [ ] 🎯 Add more beginner-friendly UI problems (you can check the non solved UI problems in the UI table)
+- [ ] 🎯 Add more UI problems (you can check the non solved UI problems in the UI table)
 - [ ] ⚙️ Configure axe-core to ignore minor accessibility warnings (e.g., missing a level-one heading) in the reportAccessibility function
 - [ ] 📸 Add a screenshot img of each problem in the README, could be automated?
 - [ ] 🔄 Set up GitHub Actions for pull requests to:
