@@ -128,7 +128,7 @@ Each challenge has:
 
 ## 🎯 Use Cases
 
-- 👨‍💼 Employers evaluating frontend developer skills through UI challenges. (I don’t recommend using medium or hard JavaScript or DSA problems in interviews because it's less realistic)
+- 👨‍💼 Employers evaluating frontend developer skills through UI challenges. (I don’t recommend using medium or hard JavaScript/DSA problems in interviews, as they are less realistic.)
 - 👩‍💻 Frontend/JavaScript developers seeking practice with coding challenges
 
 ## 🏃‍♂️ Getting Started
